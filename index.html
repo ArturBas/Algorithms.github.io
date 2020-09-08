@@ -1,1 +1,113 @@
-# Algorithms.github.io
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Project: Blog</title>
+    </head>
+    
+    <style>
+        body {
+            background-color: rgb(213, 242, 229);
+        }
+        h2 { font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; }
+        h3 { font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; font-size: 18px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; }
+        h5 { font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; }
+        li { font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; }
+        p {
+            font-family: "Courier new", sans-serif;
+        }
+        .text-superscript {
+            vertical-align: super;
+            font-style: normal;
+        }
+        .programming-language {
+            color: rgb(25, 20, 150);
+            font-style: italic;
+        }
+        .head {
+            color: rgb(25, 20, 150);
+        }
+        .date {
+            color: rgb(120, 22, 9);
+        }
+        #title {
+            color: rgb(20, 150, 30);
+        }
+    </style>
+    
+    <body>
+        
+        <h2 id="title">Algorithms Blog</h2>
+
+        <h3 id="contents" class="head">Contents</h3>
+        <ul>
+            <li><a href="#post1">Wirth's algorithm 1</a></li>
+            <li><a href="#post2">Wirth's algorithm 2</a></li>
+        </ul>
+        
+        <h3 id="post1" class="head">Wirth's algorithm 1</h3>
+        <h5 class="date">September the 8<em class="text-superscript">th</em> 2020</h5>
+        
+        <p>
+            function searchingForValue (arrayLength, value) {
+                <br><br>
+                var array = [];    
+                var i = 0;
+                var j = 0;
+                var found;
+            
+                for (i; i < arrayLength; i++) {
+                array.push(Math.floor(Math.random() * 10));
+                }
+                console.log(array);
+                    
+                for (j; j < arrayLength; j++) {
+                    if (array[j] == value) {
+                        console.log("The smallest component's index with value " + value + " is " + j);
+                        found = true;
+                        break;
+                    }
+            
+                }
+                if (!found) {
+                    console.log("The array doesn't contain value " + value + " in any component");
+                }
+            };
+            // Calling the 'searchingForValue'function: 
+            searchingForValue(30, 2); // put your own integer values for constants 'arrayLength' and 'value' into the function
+        </p>
+
+        <h3 id="post2" class="head">Wirth's algorithm 2</h3>
+        
+        <h5 class="date">September the 8<em class="text-superscript">th</em> 2020</h5>
+        
+        <p>
+            function searchingForValue (arrayLength, value) {
+    
+                let array = [];    
+                let i = 0;
+                let j = 0;
+             
+                for (i; i < arrayLength; i++) {
+                array.push(Math.floor(Math.random() * 10));
+                }
+                console.log(array);
+                    
+                for (j; j < arrayLength; j++) {
+                    if (array[j] == value) {
+                        console.log("The smallest component's index with value " + value + " is " + j);
+                        break;
+                    }
+                }
+                if (j == arrayLength) {
+                    console.log("The array doesn't contain value " + value + " in any component");
+                }
+            };
+            // Calling the 'searchingForValue'function:
+            searchingForValue(4, 2); // put your own integer values for constants 'arrayLength' and 'value' into the function
+        </p>
+        
+    <p><a href="#contents">Back to contents</a></p>
+
+    </body>
+</html>

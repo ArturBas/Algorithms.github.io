@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Project: Blog</title>
+        <title>Project: Wirth in JavaScript</title>
     </head>
     
     <style>
@@ -30,6 +30,18 @@
         .date {
             color: rgb(120, 22, 9);
         }
+        .indent1 {
+            text-indent: 30px;
+            line-height: 8px;
+        }
+        .indent2 {
+            text-indent: 60px;
+            line-height: 8px;
+        }
+        .indent3 {
+            text-indent: 90px;
+            line-height: 8px;
+        }                
         #title {
             color: rgb(20, 150, 30);
         }
@@ -37,77 +49,42 @@
     
     <body>
         
-        <h2 id="title">Algorithms Blog</h2>
-
+        <h2 id="title">Niklaus Wirth: "Algorithms + Data Structures = Programs" <i>(in JavaScript)</i></h2>
+        <p><a target="blank" href="https://en.wikipedia.org/wiki/Algorithms_%2B_Data_Structures_%3D_Programs">--> See more about the book</a></p>
         <h3 id="contents" class="head">Contents</h3>
         <ul>
-            <li><a href="#post1">Wirth's algorithm 1</a></li>
-            <li><a href="#post2">Wirth's algorithm 2</a></li>
+            <li><a href="#chapter2">Chapter 2 - Sorting</a></li>
+            <li><a href="#chapter3">Chapter 3 - Recursive Algorithms</a></li>
+            <li><a href="#chapter4">Chapter 4 - Dynamic Information Structures</a></li>
+            <li><a href="#chapter5">Chapter 5 - Language Structures and Compilers</a></li>
         </ul>
         
-        <h3 id="post1" class="head">Wirth's algorithm 1</h3>
-        <h5 class="date">September the 8<em class="text-superscript">th</em> 2020</h5>
+        <h3 id="chapter2" class="head">Chapter 2 - Sorting</h3>
+        <h5 class="date">Sequential searching by using an array selector</h5>
         
-        <p>
-            function searchingForValue (arrayLength, value) {
-                <br><br>
-                var array = [];    
-                var i = 0;
-                var j = 0;
-                var found;
-            
-                for (i; i < arrayLength; i++) {
-                array.push(Math.floor(Math.random() * 10));
-                }
-                console.log(array);
-                    
-                for (j; j < arrayLength; j++) {
-                    if (array[j] == value) {
-                        console.log("The smallest component's index with value " + value + " is " + j);
-                        found = true;
-                        break;
-                    }
-            
-                }
-                if (!found) {
-                    console.log("The array doesn't contain value " + value + " in any component");
-                }
-            };
-            // Calling the 'searchingForValue'function: 
-            searchingForValue(30, 2); // put your own integer values for constants 'arrayLength' and 'value' into the function
-        </p>
+            <p>function find    ValueInArray (array, valueToFind) {</p>
+                <p class="indent1">var i = 0;</p>
+                                    
+                <p class="indent1">for (i; i < (array.length - 1); i++) {</p>
+                    <p class="indent2">if (array[i] != valueToFind) {</p>
+                        <p class="indent3">console.log("the array does not include the valueToFind");</p>            
+                    <p class="indent2">}</p>
+                <p class="indent1">}</p>
+            <p>};</p>
 
-        <h3 id="post2" class="head">Wirth's algorithm 2</h3>
+        <h5 class="date">Sequential searching by using an array selector (method with the sentinel)</h5>
         
-        <h5 class="date">September the 8<em class="text-superscript">th</em> 2020</h5>
+        <p>function findValueInArray (array, valueToFind) {</p>
+            <p class="indent1">var i = 0;</p>
+                                
+            <p class="indent1">for (i; i < array.length; i++) {</p>
+                <p class="indent2">if (i == array.lenght) {</p>
+                    <p class="indent3">console.log("the array does not include the valueToFind");</p>            
+                <p class="indent2">}</p>
+            <p class="indent1">}</p>
+        <p>};</p>
         
-        <p>
-            function searchingForValue (arrayLength, value) {
-    
-                let array = [];    
-                let i = 0;
-                let j = 0;
-             
-                for (i; i < arrayLength; i++) {
-                array.push(Math.floor(Math.random() * 10));
-                }
-                console.log(array);
-                    
-                for (j; j < arrayLength; j++) {
-                    if (array[j] == value) {
-                        console.log("The smallest component's index with value " + value + " is " + j);
-                        break;
-                    }
-                }
-                if (j == arrayLength) {
-                    console.log("The array doesn't contain value " + value + " in any component");
-                }
-            };
-            // Calling the 'searchingForValue'function:
-            searchingForValue(4, 2); // put your own integer values for constants 'arrayLength' and 'value' into the function
-        </p>
-        
-    <p><a href="#contents">Back to contents</a></p>
+    <p><a href="#contents">Back to the contents</a></p>
 
     </body>
 </html>

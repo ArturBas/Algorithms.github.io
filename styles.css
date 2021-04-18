@@ -6,32 +6,32 @@
 
 @font-face {
   font-family: '1942';
-  src: url('fonts/1942-webfont.woff') format('woff');
+  src: url('1942-webfont.woff') format('woff');
 }
 
 @font-face {
   font-family: 'bebas';
-  src: url('fonts/Bebas-Regular-webfont.woff') format('woff');
+  src: url('Bebas-Regular-webfont.woff') format('woff');
 }
 
 @font-face {
   font-family: 'daniel';
-  src: url('fonts/Daniel-Regular-webfont.woff') format('woff');
+  src: url('Daniel-Regular-webfont.woff') format('woff');
 }
 
 @font-face {
   font-family: 'bitstream';
-  src: url('fonts/VeraMono-webfont.woff') format('woff');
+  src: url('VeraMono-webfont.woff') format('woff');
 }
 
 @font-face {
   font-family: 'cartoonist';
-  src: url('fonts/SF_Cartoonist_Hand-webfont.woff') format('woff');
+  src: url('SF_Cartoonist_Hand-webfont.woff') format('woff');
 }
 
 @font-face {
   font-family: 'cartoonist-bold';
-  src: url('fonts/SF_Cartoonist_Hand_SC_Bold-webfont.woff') format('woff');
+  src: url('SF_Cartoonist_Hand_SC_Bold-webfont.woff') format('woff');
 }
 
 /* unvisited link */

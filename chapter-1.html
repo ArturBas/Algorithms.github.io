@@ -39,13 +39,9 @@
                     <p><b>if</b> a&lsqb;i&rsqb; &ne; x <b>then</b> &quot;the array does not include the a&quot;</p>
                 </div>
                 <div class='chapter1-example1-content-javascript'>
-<<<<<<< HEAD
                     <p>function find ValueInArray &lpar;array, valueToFind&rpar; &lcub;</p>
                         <p class="indent1">let text;</p>        
-=======
-                    <p>function findValueInArray &lpar;array, valueToFind&rpar; &lcub;</p>
-                        <p class="indent1">var text;</p>        
->>>>>>> 45406d5990bde840295dad59cc85961ba48477ed
+
                         <p class="indent1">for &lpar;i &equals; 0; i &lt; array.length; i&plus;&plus;&rpar; &lcub;</p>
                             <p class="indent2">if &lpar;array&lsqb;i&rsqb; &equals;&equals; valueToFind&rpar; &lcub;</p>
                                 <p class="indent3">text &equals; &quot;the array includes the valueToFind with the &quot; &plus; i &plus; &quot;&minus;index&quot;;</p>            
@@ -89,21 +85,12 @@
             
                     <br><p>ALTERNATIVE VERSION:</p><br>
                     
-<<<<<<< HEAD
                     <p>function find    ValueInArray &lpar;array, valueToFind&rpar; &lcub;</p>
                         <p class="indent1">let text;</p>
                         <p class="indent1">array.push&lpar;valueToFind&rpar;;</p>        
                         <p class="indent1">for &lpar;let i &equals; &hyphen;1; array&lsqb;i&rsqb; &excl;&equals;&equals; valueToFind; i&plus;&plus;&rpar; &lcub;</p>
                             <p class="indent2">if &lpar;i &lt; &lpar;array.length &hyphen; 2&rpar;&rpar; &lcub;</p>
-                                <p class="indent3">text &equals; &quot;the array includes the valueToFind with the &quot; &plus; &lpar;i &plus; 1&rpar; &plus; &quot;&hyphen;index&quot;;</p>            
-=======
-                    <p>function findValueInArray &lpar;array, valueToFind&rpar; &lcub;</p>
-                        <p class="indent1">var text;</p>
-                        <p class="indent1">array.push&lpar;valueToFind&rpar;;</p>        
-                        <p class="indent1">for &lpar;var i &equals; &minus;1; array&lsqb;i&rsqb; &excl;&equals;&equals; valueToFind; i&plus;&plus;&rpar; &lcub;</p>
-                            <p class="indent2">if &lpar;i &lt; &lpar;array.length &minus;; 2&rpar;&rpar; &lcub;</p>
-                                <p class="indent3">text &equals; &quot;the array includes the valueToFind with the &quot; &plus; &lpar;i &plus; 1&rpar; &plus; &quot;&minus;index&quot;;</p>            
->>>>>>> 45406d5990bde840295dad59cc85961ba48477ed
+                                <p class="indent3">text &equals; &quot;the array includes the valueToFind with the &quot; &plus; &lpar;i &plus; 1&rpar; &plus; &quot;&hyphen;index&quot;;</p>
                             <p class="indent2">&rcub; else &lcub;</p>
                                 <p class="indent3">text &equals; &quot;the array does not include the valueToFind&quot;;</p>
                             <p class="indent2">&rcub;</p>

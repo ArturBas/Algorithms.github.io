@@ -6,32 +6,32 @@
 
 @font-face {
   font-family: '1942';
-  src: url('1942-webfont.woff') format('woff');
+  src: url('fonts/1942-webfont.woff') format('woff');
 }
 
 @font-face {
   font-family: 'bebas';
-  src: url('Bebas-Regular-webfont.woff') format('woff');
+  src: url('fonts/Bebas-Regular-webfont.woff') format('woff');
 }
 
 @font-face {
   font-family: 'daniel';
-  src: url('Daniel-Regular-webfont.woff') format('woff');
+  src: url('fonts/Daniel-Regular-webfont.woff') format('woff');
 }
 
 @font-face {
   font-family: 'bitstream';
-  src: url('VeraMono-webfont.woff') format('woff');
+  src: url('fonts/VeraMono-webfont.woff') format('woff');
 }
 
 @font-face {
   font-family: 'cartoonist';
-  src: url('SF_Cartoonist_Hand-webfont.woff') format('woff');
+  src: url('fonts/SF_Cartoonist_Hand-webfont.woff') format('woff');
 }
 
 @font-face {
   font-family: 'cartoonist-bold';
-  src: url('SF_Cartoonist_Hand_SC_Bold-webfont.woff') format('woff');
+  src: url('fonts/SF_Cartoonist_Hand_SC_Bold-webfont.woff') format('woff');
 }
 
 /* unvisited link */
@@ -59,7 +59,7 @@ a:active {
 }
 
 header {
-  color: #fff;
+  color: #ffffff;
   background-color: #5995DA;
   padding: 25px 0;
   display: flex;
@@ -76,7 +76,7 @@ header {
 
 .about-me {
   font-family: "cartoonist-bold", sans-serif;
-  color: #ffff;
+  color: #ffffff;
   font-size: 15px;
   font-weight: bold;
 }
@@ -203,9 +203,9 @@ header {
 }
   
 .chapter1-title,
-.chapter3-title,
+.chapter2-title,
 .chapter1-header,
-.chapter3-header {
+.chapter2-header {
   background-color: #ffffff;
   border-bottom: 1px solid #000000;
   width: 900px;
@@ -217,8 +217,8 @@ header {
   padding: 10px;
 }
 
-.chapter1-example1-title,
-.chapter3-example1-title {
+.chapter1-example-title,
+.chapter2-example-title {
     flex: 1;
     display: flex;
     justify-content: left;
@@ -227,7 +227,7 @@ header {
 }
 
 .chapter1-go-to-menu,
-.chapter3-go-to-menu {
+.chapter2-go-to-menu {
     flex: initial;
     display: flex;
     justify-content: flex-end;
@@ -236,20 +236,20 @@ header {
     font-size: 15px;
 }
 
-.chapter1-example1-content,
-.chapter3-example1-content,
+.chapter1-example-content,
+.chapter2-example-content,
 .skills-content {
   display: flex;
   width: 900px;
   justify-content: center;
 }
 
-.chapter1-example1-content-pascal,
-.chapter3-example1-content-pascal,
-.chapter1-example1-content-javascript,
-.chapter3-example1-content-javascript,
-.chapter3-example1-content-pascal-language,
-.chapter3-example1-content-javascript-language {
+.chapter1-example-content-pascal,
+.chapter2-example-content-pascal,
+.chapter1-example-content-javascript,
+.chapter2-example-content-javascript,
+.chapter2-example-content-pascal-language,
+.chapter2-example-content-javascript-language {
   flex: initial;
   width: 450px;
   display: flex;
@@ -259,18 +259,18 @@ header {
   padding: 15px;
 }
 
-.chapter1-example1-content-pascal,
-.chapter3-example1-content-pascal,
-.chapter3-example1-content-pascal-language {
+.chapter1-example-content-pascal,
+.chapter2-example-content-pascal,
+.chapter2-example-content-pascal-language {
   background-color: #ffffff;
   color: #000000;
   font-family: 'bitstream', sans-serif;
   font-size: 12px;
 }
 
-.chapter1-example1-content-javascript,
-.chapter3-example1-content-javascript,
-.chapter3-example1-content-javascript-language {
+.chapter1-example-content-javascript,
+.chapter2-example-content-javascript,
+.chapter2-example-content-javascript-language {
   background-color: #000000;
   color: #ffffff;
   font-family: 'bitstream', sans-serif;
@@ -313,15 +313,19 @@ header {
 }
 
 .indent1 {
-  text-indent: 30px;
+  text-indent: 20px;
 }
 
 .indent2 {
-  text-indent: 60px;
+  text-indent: 40px;
 }
 
 .indent3 {
-  text-indent: 90px;
+  text-indent: 60px;
+}
+
+.indent4 {
+  text-indent: 80px;
 }
 
 footer {

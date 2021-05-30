@@ -24,83 +24,65 @@
         <section class='chapter-container'>
             <p class='chapter1-title'>Chapter 1 &hyphen; Fundamental Data Structures &lpar;work in progress&rpar;</p>
             <div class='chapter1-header'>
-                <p class="chapter1-example-title">Sequential searching by using array selector</p>
+                <p class="chapter1-example-title">Computing the sum of an array</p>
                 <p class="chapter1-go-to-menu"><a href="wirth-in-javascript.html">Go to menu</a></p>
             </div>
             <div class='chapter1-example-content'>
-                <div class='chapter1-example-content-pascal'><b>Pascal &lpar;notation from the book&rpar;</b></div>
+                <div class='chapter1-example-content-pascal'><b>Pascal <a href="https://www.inr.ac.ru/~info21/ADen/AD2012.pdf#page=18" target="_blank">&lpar;&rArr; notation from the book&rpar;</a></b></div>
                 <div class='chapter1-example-content-javascript'><b>JavaScript</b></div>
             </div>
             <div class='chapter1-example-content'>
                 <div class='chapter1-example-content-pascal'>
-                    <p><b>var</b> a: <b>array&lsqb;</b>1..N&rsqb; <b>of</b> T; &lcub;N&gt;0&rcub;</p>
-                    <p>i&colon;&equals;0;</p>
-                    <p><b>repeat</b> i:&equals;i&plus;1 <b>until</b> &lpar;a&lsqb;i&rsqb;=x&rpar; v &lpar;i=N&rpar;;</p>
-                    <p><b>if</b> a&lsqb;i&rsqb; &ne; x <b>then</b> &quot;the array does not include the a&quot;</p>
+                    <p>VAR a&colon; ARRAY N OF INTEGER&semi;</p>
+                    <p>sum&colon;&equals;0&semi;</p>
+                    <p>FOR i&colon;&equals;0 TO N&minus;1 DO sum&colon;&equals;a&lsqb;i&rsqb; &plus; sum END</p>
                 </div>
                 <div class='chapter1-example-content-javascript'>
-                    <p>function find ValueInArray &lpar;array, valueToFind&rpar; &lcub;</p>
-                    <p class="indent1">let text;</p>        
-                    <p class="indent1">for &lpar;i &equals; 0; i &lt; array.length; i&plus;&plus;&rpar; &lcub;</p>
-                    <p class="indent2">if &lpar;array&lsqb;i&rsqb; &equals;&equals; valueToFind&rpar; &lcub;</p>
-                    <p class="indent3">text &equals; &quot;the array includes the valueToFind with the &quot; &plus; i &plus; &quot;&minus;index&quot;;</p>            
-                    <p class="indent3">break;</p>
-                    <p class="indent2">&rcub; else &lcub;</p>
-                    <p class="indent3">text &equals; &quot;the array does not include the valueToFind&quot;;</p>
-                    <p class="indent2">&rcub;</p>
-                    <p class="indent1">&rcub;</p>
-                    <p class="indent1">console.log&lpar;text&rpar;;</p>
-                    <p>&rcub;</p>
-                </div>
-            </div>
-            <div class='chapter1-header'>
-                <div class="chapter1-example-title">Sequential searching by using array selector &lpar;method with setinel&rpar;</div>
-                <div class="chapter1-go-to-menu"><a href="wirth-in-javascript.html">Go to menu</a></div>
-            </div>
-            <div class='chapter1-example-content'>
-                <div class='chapter1-example-content-pascal'><b>Pascal &lpar;notation from the book&rpar;</b></div>
-                <div class='chapter1-example-content-javascript'><b>JavaScript</b></div>
-            </div>
-            <div class='chapter1-example-content'>
-                <div class='chapter1-example-content-pascal'>
-                    <p><b>var</b> a&colon; <b>array</b>&lsqb;1..N &plus; 1&rsqb; <b>of</b> T;</p>
-                    <p>i&colon;&equals;0; a&lsqb;N &plus; 1&rsqb;&colon;&equals;x;</p>
-                    <p><b>repeat</b> i&colon;&equals;i&plus;1 <b>until</b> a&lsqb;i&rsqb;&equals;x;</p>
-                    <p><b>if</b> i&gt;N <b>then</b> &quot;the array does not include the a&quot;</p>                    
-                </div>
-                <div class='chapter1-example-content-javascript'>
-                    <p>function findValueInArray &lpar;array, valueToFind&rpar; &lcub;</p>
-                    <p class="indent1">let i &equals; 0;</p>
-                    <p class="indent1">array.push&lpar;valueToFind&rpar;;</p>                                
-                    <p class="indent1">while &lpar;array&lsqb;i&rsqb; &excl;&equals;&equals; valueToFind&rpar; &lcub;</p>    
-                    <p class="indent2">i&plus;&plus;;</p>
-                    <p class="indent1">&rcub;</p>
-                    <p class="indent1">if &lpar;i &lt; &lpar;array.length &minus; 1&rpar;&rpar; &lcub;</p>            
-                    <p class="indent2">console.log&lpar;&quot;the array includes the valueToFind with the &quot; &plus; i &plus; &quot;&minus;index&quot;&rpar;;</p>
-                    <p class="indent1">&rcub; else &lcub;</p>
-                    <p class="indent2">console.log&lpar;&quot;the array does not include the valueToFind&quot;&rpar;;</p>
-                    <p class="indent1">&rcub;</p>
-                    <p>&rcub;</p>
-            
-                    <br><p>ALTERNATIVE VERSION:</p><br>
-                    
-                    <p>function findValueInArray &lpar;array, valueToFind&rpar; &lcub;</p>
-                    <p class="indent1">let text;</p>
-                    <p class="indent1">array.push&lpar;valueToFind&rpar;;</p>        
-                    <p class="indent1">for &lpar;let i &equals; &hyphen;1; array&lsqb;i&rsqb; &excl;&equals;&equals; valueToFind; i&plus;&plus;&rpar; &lcub;</p>
-                    <p class="indent2">if &lpar;i &lt; &lpar;array.length &minus;; 2&rpar;&rpar; &lcub;</p>
-                    <p class="indent3">text &equals; &quot;the array includes the valueToFind with the &quot; &plus; &lpar;i &plus; 1&rpar; &plus; &quot;&hyphen;index&quot;;</p>
-                    <p class="indent2">&rcub; else &lcub;</p>
-                    <p class="indent3">text &equals; &quot;the array does not include the valueToFind&quot;;</p>
-                    <p class="indent2">&rcub;</p>
-                    <p class="indent1">&rcub;</p>
-                    <p class="indent1">console.log&lpar;text&rpar;;</p>
+                    <p>const a &equals; &lsqb;&rsqb;;</p>
+                    <p>const n &equals; a&period;length&semi;</p>        
+                    <p>let i &equals; 0&semi;</p>
+                    <p>let sum &equals; 0&semi;</p>
+                    <br>
+                    <p>for &lpar;i&semi; i &lt;&equals; &lpar;n &minus; 1&rpar;&semi; i&plus;&plus;&rpar; &lcub;</p>
+                    <p class="indent1">sum &equals; a&lsqb;i&rsqb; &plus; sum&semi;</p>
                     <p>&rcub;</p>
                 </div>
             </div>
 
             <div class='chapter1-header'>
-                <p class="chapter1-example-title">Iterating by using &quot;for&quot; instruction</p>
+                <p class="chapter1-example-title">Finding the maximal element of an array</p>
+                <p class="chapter1-go-to-menu"><a href="wirth-in-javascript.html">Go to menu</a></p>
+            </div>
+            <div class='chapter1-example-content'>
+                <div class='chapter1-example-content-pascal'><b>Pascal <a href="https://www.inr.ac.ru/~info21/ADen/AD2012.pdf#page=18" target="_blank">&lpar;&rArr; notation from the book&rpar;</a></b></div>
+                <div class='chapter1-example-content-javascript'><b>JavaScript</b></div>
+            </div>
+            <div class='chapter1-example-content'>
+                <div class='chapter1-example-content-pascal'>
+                    <p>VAR a&colon; ARRAY N OF INTEGER&semi;</p>
+                    <p>k&colon;&equals;0&semi; max&colon;&equals;a&lsqb;0&rsqb;&semi;</p>
+                    <p>FOR i&colon;&equals;1 TO N&minus;1 DO</p>
+                    <p class="indent1">IF max &lt; a&lsqb;i&rsqb; THEN k&colon;&equals;i&semi; max&colon;&equals;a&lsqb;k&rsqb; END</p>
+                    <p>END</p>
+                </div>
+                <div class='chapter1-example-content-javascript'>
+                    <p>const a &equals; &lsqb;&rsqb;;</p>
+                    <p>const n &equals; a&period;length&semi;</p>        
+                    <p>let i &equals; 1&semi;</p>
+                    <p>let k &equals; 0&semi;</p>
+                    <p>let max &equals; a&lsqb;0&rsqb;&semi;</p>
+                    <br>
+                    <p>for &lpar;i&semi; i &lt;&equals; &lpar;n &minus; 1&rpar;&semi; i&plus;&plus;&rpar; &lcub;</p>
+                    <p class="indent1">if &lpar;max &lt; a&lsqb;i&rsqb;&rpar; &lcub;</p>
+                    <p>k &equals; i&semi;</p>
+                    <p>max &equals; a&lsqb;k&rsqb;&semi;</p>
+                    <p class="indent1">&rcub;</p>
+                    <p>&rcub;</p>
+                </div>
+            </div>
+
+            <div class='chapter1-header'>
+                <p class="chapter1-example-title">Dividing arrays &lpar;practical example&rpar;</p>
                 <p class="chapter1-go-to-menu"><a href="wirth-in-javascript.html">Go to menu</a></p>
             </div>
             <div class='chapter1-example-content'>
@@ -109,36 +91,37 @@
             </div>
             <div class='chapter1-example-content'>
                 <div class='chapter1-example-content-pascal'>
-                    <p>PROCEDURE Power &lpar;VAR W: Texts.Writer; N: INTEGER&rpar;;</p>
+                    <p>PROCEDURE Power &lpar;VAR W&colon; Texts&period;Writer&semi; N&colon; INTEGER&rpar;&semi;</p>
                     <p class="indent1">&lpar;&ast;compute decimal representation of negative powers of 2&ast;&rpar;</p>
-                    <p class="indent1">VAR i,k,r: INTEGER;</p>
-                    <p class="indent2">d: ARRAY N OF INTEGER;</p>
+                    <p class="indent1">VAR i&comma;k&comma;r&colon; INTEGER&semi;</p>
+                    <p class="indent2">d&colon; ARRAY N OF INTEGER&semi;</p>
                     <p>BEGIN</p>
-                    <p class="indent1">FOR k:&equals;0 TO N&minus;1 DO</p>
-                    <p class="indent2">Texts.Write &lpar;W, "."&rpar;; r: &equals; 0;</p>
-                    <p class="indent2">FOR i:&equals;1; TO k&minus;1 DO</p>
-                    <p class="indent3">r:&equals;10&ast;r &plus; d&lsqb;i&rsqb;; d&lsqb;i&rsqb;:&equals;r DIV 2; r:&equals;r MOD 2;</p>
-                    <p class="indent3">Texts.Write&lpar;W, CHR&lpar;d&lsqb;i&rsqb; &plus; ord&lpar;"0"&rpar;&rpar;&rpar;</p>
-                    <p class="indent2">END;</p>
-                    <p class="indent2">d&lsqb;k&rsqb;:&equals;5; Texts.Writeln&lpar;W, "5"&rpar;; Texts.WriteLn&lpar;W&rpar;</p>
+                    <p class="indent1">FOR k&colon;&equals;0 TO N&minus;1 DO</p>
+                    <p class="indent2">Texts&period;Write &lpar;W&comma; &quot;&period;&quot;&rpar;&semi; r&colon; &equals; 0&semi;</p>
+                    <p class="indent2">FOR i&colon;&equals;1&semi; TO k&minus;1 DO</p>
+                    <p class="indent3">r&colon;&equals;10&ast;r &plus; d&lsqb;i&rsqb;&semi; d&lsqb;i&rsqb;&colon;&equals;r DIV 2&semi; r&colon;&equals;r MOD 2&semi;</p>
+                    <p class="indent3">Texts&period;Write&lpar;W&comma; CHR&lpar;d&lsqb;i&rsqb; &plus; ord&lpar;&quot;0&quot;&rpar;&rpar;&rpar;</p>
+                    <p class="indent2">END&semi;</p>
+                    <p class="indent2">d&lsqb;k&rsqb;&colon;&equals;5&semi; Texts&period;Writeln&lpar;W&comma; &quot;5&quot;&rpar;&semi; Texts&period;WriteLn&lpar;W&rpar;</p>
                     <p class="indent1">END</p>
                     <p>END Power</p>
                 </div>
                 <div class='chapter1-example-content-javascript'>
-                    <p>const n;</p>
-                    <p>let i;</p>
-                    <p>let k;</p>
-                    <p>let r;</p>
-                    <p>let d &equals; &lsqb;&rsqb;;</p>
+                    <p>function power&lpar;n&rpar; &lcub;</p>
+                    <p class="indent1">let i&semi;</p>
+                    <p class="indent1">let k&semi;</p>
+                    <p class="indent1">let r&semi;</p>
+                    <p class="indent1">let d &equals; &lsqb;&rsqb;&semi;</p>
                     <br>
-                    <p>for &lpar;k &equals; 0; k &lt;&equals; n-1; k&plus;&plus;&rpar; &lcub;</p>
-                    <p class="indent1">r &equals; 0;</p>        
-                    <p class="indent1">for &lpar;i &equals; 0; k &lt;&equals; &lpar;k &minus; 1&rpar;; i&plus;&plus;&rpar; &lcub;</p>
-                    <p class="indent2">r &equals; 10 &ast; r &plus; d&lsqb;i&rsqb;;</p>
-                    <p class="indent2">d&lsqb;i&rsqb; &plus; Math.floor&lpar;r &sol; 2&rpar;;</p>            
-                    <p class="indent2">r &equals; r &minus; 2 &ast; d&lsqb;i&rsqb;;</p>
+                    <p>for &lpar;k &equals; 0&semi; k &lt;&equals; n&minus;1; k&plus;&plus;&rpar; &lcub;</p>
+                    <p class="indent2">r &equals; 0&semi;</p>        
+                    <p class="indent2">for &lpar;i &equals; 0&semi; k &lt;&equals; &lpar;k &minus; 1&rpar;&semi; i&plus;&plus;&rpar; &lcub;</p>
+                    <p class="indent3">r &equals; 10 &ast; r &plus; d&lsqb;i&rsqb;&semi;</p>
+                    <p class="indent3">d&lsqb;i&rsqb; &plus; Math&period;floor&lpar;r &sol; 2&rpar;&semi;</p>            
+                    <p class="indent3">r &equals; r &minus; 2 &ast; d&lsqb;i&rsqb;&semi;</p>
+                    <p class="indent2">&rcub;</p>
+                    <p class="indent2">console&period;log&lpar;&quot;&period;&quot; &plus; d&period;join&lpar;&quot;&quot;&rpar;&rpar;&semi;</p>
                     <p class="indent1">&rcub;</p>
-                    <p class="indent1">console.log&lpar;"." &plus; d.join&lpar;""&rpar;&rpar;;</p>
                     <p>&rcub;</p>
                 </div>
             </div>

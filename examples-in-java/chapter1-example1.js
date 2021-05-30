@@ -1,18 +1,10 @@
-function findValueInArray(array, valueToFind) {
-    let text;
-    for (i = 0; i < array.length; i++) {
-        if (array[i] == valueToFind) {
-            text = 'the array includes the valueToFind with the ' + i + '-index';
-            break;
-        } else {
-            text = 'the array does not include the valueToFind';
-        }
-    }
-    console.log(text);
+const a = [3,9,5,2,6,15,16]; /* an example set of values for checking the algorithm correctness */
+const n = a.length;
+let i = 0;
+let sum = 0;
+
+for (i; i <= (n - 1); i++) {
+    sum = a[i] + sum;
 }
 
-/* check the function: example where array does not include the value */
-findValueInArray([3,9,5,2,6,7,0], 4);
-
-/* check the function: example where array includes the value */
-findValueInArray([3,9,5,2,6,7,0], 6);
+console.log(sum); /* printing the result */

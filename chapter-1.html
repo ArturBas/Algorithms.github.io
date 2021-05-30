@@ -64,7 +64,7 @@
             <div class='chapter1-example-content'>
                 <div class='chapter1-example-content-pascal'>
                     <p><b>var</b> a&colon; <b>array</b>&lsqb;1..N &plus; 1&rsqb; <b>of</b> T;</p>
-                    <p>i&colon;&equals;0; a&lsqb;N + 1&rsqb;&colon;&equals;x;</p>
+                    <p>i&colon;&equals;0; a&lsqb;N &plus; 1&rsqb;&colon;&equals;x;</p>
                     <p><b>repeat</b> i&colon;&equals;i&plus;1 <b>until</b> a&lsqb;i&rsqb;&equals;x;</p>
                     <p><b>if</b> i&gt;N <b>then</b> &quot;the array does not include the a&quot;</p>                    
                 </div>
@@ -88,7 +88,7 @@
                     <p class="indent1">let text;</p>
                     <p class="indent1">array.push&lpar;valueToFind&rpar;;</p>        
                     <p class="indent1">for &lpar;let i &equals; &hyphen;1; array&lsqb;i&rsqb; &excl;&equals;&equals; valueToFind; i&plus;&plus;&rpar; &lcub;</p>
-                    <p class="indent2">if &lpar;i &lt; &lpar;array.length &hyphen; 2&rpar;&rpar; &lcub;</p>
+                    <p class="indent2">if &lpar;i &lt; &lpar;array.length &minus;; 2&rpar;&rpar; &lcub;</p>
                     <p class="indent3">text &equals; &quot;the array includes the valueToFind with the &quot; &plus; &lpar;i &plus; 1&rpar; &plus; &quot;&hyphen;index&quot;;</p>
                     <p class="indent2">&rcub; else &lcub;</p>
                     <p class="indent3">text &equals; &quot;the array does not include the valueToFind&quot;;</p>
@@ -109,32 +109,31 @@
             </div>
             <div class='chapter1-example-content'>
                 <div class='chapter1-example-content-pascal'>
-                    <p><b>program</b> power &lpar;output&rpar;;</p>
-                    <p>&lcub;decimal representation of the negative powers of 2&rcub;</p>
-                    <p><b>const</b> n: &equals; 10;</p>
-                    <p><b>type</b> digit &equals; 0..9;</p>
-                    <p><b>var</b> i,k,r: integer;</p>
-                    <p class="indent1">d: <b>array</b> &lsqb;1..n&rsqb; <b>of</b> digit;</p>
-                    <p><b>begin for</b> k: &equals; 1; <b>to</b> n <b>do</b></p>
-                    <p class="indent1"><b>begin</b> write &lpar;'.'&rpar;; r: &equals; 0;</p>
-                    <p class="indent2"><b>for</b> i: &equals; 1; <b>to</b> k - 1 <b>do</b></p>
-                    <p class="indent3"><b>begin</b> r: &equals; 10 &ast; r &plus; d&lsqb;i&rsqb;; d&lsqb;i&rsqb;: &equals; r <b>div</b> 2;</p>
-                    <p class="indent4">r: &equals; r &minus; 2 &ast; d&lsqb;i&rsqb;; write&lpar;chr&lpar;d&lsqb;i&rsqb; &plus; ord&lpar;'0'&rpar;&rpar;&rpar;</p>
-                    <p class="indent3"><b>end;</b></p>
-                    <p class="indent2">d&lsqb;k&rsqb;: &equals; 5; writeln&lpar;'5'&rpar;</p>
-                    <p class="indent1"><b>end</b></p>
-                    <p><b>end.</b></p>
+                    <p>PROCEDURE Power &lpar;VAR W: Texts.Writer; N: INTEGER&rpar;;</p>
+                    <p class="indent1">&lpar;&ast;compute decimal representation of negative powers of 2&ast;&rpar;</p>
+                    <p class="indent1">VAR i,k,r: INTEGER;</p>
+                    <p class="indent2">d: ARRAY N OF INTEGER;</p>
+                    <p>BEGIN</p>
+                    <p class="indent1">FOR k:&equals;0 TO N&minus;1 DO</p>
+                    <p class="indent2">Texts.Write &lpar;W, "."&rpar;; r: &equals; 0;</p>
+                    <p class="indent2">FOR i:&equals;1; TO k&minus;1 DO</p>
+                    <p class="indent3">r:&equals;10&ast;r &plus; d&lsqb;i&rsqb;; d&lsqb;i&rsqb;:&equals;r DIV 2; r:&equals;r MOD 2;</p>
+                    <p class="indent3">Texts.Write&lpar;W, CHR&lpar;d&lsqb;i&rsqb; &plus; ord&lpar;"0"&rpar;&rpar;&rpar;</p>
+                    <p class="indent2">END;</p>
+                    <p class="indent2">d&lsqb;k&rsqb;:&equals;5; Texts.Writeln&lpar;W, "5"&rpar;; Texts.WriteLn&lpar;W&rpar;</p>
+                    <p class="indent1">END</p>
+                    <p>END Power</p>
                 </div>
                 <div class='chapter1-example-content-javascript'>
-                    <p>const n &equals; 10;</p>
+                    <p>const n;</p>
                     <p>let i;</p>
                     <p>let k;</p>
                     <p>let r;</p>
                     <p>let d &equals; &lsqb;&rsqb;;</p>
                     <br>
-                    <p>for &lpar;k &equals; 1; k &lt;&equals; n; k&plus;&plus;&rpar; &lcub;</p>
+                    <p>for &lpar;k &equals; 0; k &lt;&equals; n-1; k&plus;&plus;&rpar; &lcub;</p>
                     <p class="indent1">r &equals; 0;</p>        
-                    <p class="indent1">for &lpar;i &equals; 1; k &lt;&equals; &lpar;k &minus; 1&rpar;; i&plus;&plus;&rpar; &lcub;</p>
+                    <p class="indent1">for &lpar;i &equals; 0; k &lt;&equals; &lpar;k &minus; 1&rpar;; i&plus;&plus;&rpar; &lcub;</p>
                     <p class="indent2">r &equals; 10 &ast; r &plus; d&lsqb;i&rsqb;;</p>
                     <p class="indent2">d&lsqb;i&rsqb; &plus; Math.floor&lpar;r &sol; 2&rpar;;</p>            
                     <p class="indent2">r &equals; r &minus; 2 &ast; d&lsqb;i&rsqb;;</p>

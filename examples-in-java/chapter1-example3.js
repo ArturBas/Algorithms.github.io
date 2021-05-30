@@ -4,9 +4,9 @@ let k;
 let r;
 let d = [];
 
-for (k = 1; k <= n; k++) {
+for (k = 0; k <= n-1; k++) {
     r = 0;
-    for (i = 1; i <= (k - 1); i++) {
+    for (i = 0; i <= (k - 1); i++) {
         r = 10 * r + d[i];
         d[i] = Math.floor(r/2);
         r = r - 2 * d[i];

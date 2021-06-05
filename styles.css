@@ -4,9 +4,557 @@
   box-sizing: border-box;
 }
 
-.page {
-  display: flex;
-  flex-wrap: wrap;
+/* Mobile Styles */
+@media only screen and (max-width: 500px) {
+  header {
+    display: flex;
+    padding: 25px;
+  }
+
+  .header-container {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+  }
+
+  .about-me {
+    padding-bottom: 15px;
+  }
+
+  .quotation1-containter {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .quotation2-containter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 15px, 0px, 0px, 15px;
+  }
+
+  .contact-data-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-top: 15px;
+  }
+
+  .linkedin {
+    display: flex;
+  }
+  
+  .contact-linkedin-icon {
+    display: flex;
+    margin-right: 2px;
+  }
+
+  .name-surname {
+    display: flex;
+  }
+  
+  .title-container,
+  .summary-container {
+    display: flex;
+    justify-content: center;
+
+    border-bottom: 1px solid #000000;
+  }
+
+  .title,
+  .summary {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: initial;
+    height: 200px;
+    width: 900px;
+  }
+
+  .sub-title,
+  .summary-description {
+    padding-top: 10px;
+  }
+
+  .chapters-grid-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .chapters-grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .chapters-grid-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 100%;
+    padding: 15px;
+  
+    border-bottom: 1px solid #000000;
+  }
+  
+  .skills-container,
+  .projects-container {
+    display: flex;
+  }
+  
+  .skills-content,
+  .technologies-content,
+  .tools-content,
+  .knowledge-content,
+  .projects-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 15px;
+  }
+
+  .technologies-content,
+  .tools-content,
+  .knowledge-content,
+  .projects-content {
+    border-bottom: 1px solid #000000;
+  }
+
+  .chapter-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .chapter1-title,
+  .chapter2-title,
+  .chapter1-header,
+  .chapter2-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .chapter1-example-title,
+  .chapter2-example-title {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .chapter1-go-to-menu,
+  .chapter2-go-to-menu {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 10px;
+  }
+
+  .chapter1-example-content,
+  .chapter2-example-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .chapter1-example-content-pascal,
+  .chapter2-example-content-pascal,
+  .chapter1-example-content-javascript,
+  .chapter2-example-content-javascript,
+  .chapter2-example-content-pascal-language,
+  .chapter2-example-content-javascript-language {
+    flex: initial;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: initial;
+    padding: 15px;
+  }
+
+  footer {
+    display: flex;
+    flex: initial;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+  }
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 501px) and (max-width: 900px) {
+
+  header {
+    display: flex;
+    padding: 25px;
+  }
+
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    width: 100%;
+  }
+
+  .quotation1-containter {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .quotation2-containter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .contact-data-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-top: 10px;
+  }
+
+  .linkedin {
+    display: flex;
+  }
+  
+  .contact-linkedin-icon {
+    display: flex;
+    margin-right: 2px;
+  }
+
+  .name-surname {
+    display: flex;
+  }
+
+  .title-container,
+  .summary-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .title,
+  .summary {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: initial;
+    height: 200px;
+    width: 100%;
+
+    border-bottom: 1px solid #000000;
+  }
+
+  .sub-title,
+  .summary-description {
+    padding-top: 10px;
+  }
+
+  .chapters-grid-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .chapters-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .chapters-grid-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 290px;
+    padding: 15px;
+    margin: 3px;
+  
+    border: 1px solid #000000;
+  }
+
+  .skills-container,
+  .projects-container {
+    display: flex;
+  }
+  
+  .skills-content,
+  .technologies-content,
+  .tools-content,
+  .knowledge-content,
+  .projects-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 15px;
+  }
+
+  .technologies-content,
+  .tools-content,
+  .knowledge-content,
+  .projects-content {
+    border-bottom: 1px solid #000000;
+  }
+
+  .chapter-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .chapter-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .chapter1-title,
+  .chapter2-title,
+  .chapter1-header,
+  .chapter2-header {
+    display: flex;
+    align-items: initial;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .chapter1-example-title,
+  .chapter2-example-title {
+    display: flex;
+    flex: 1;
+    justify-content: left;
+  }
+
+  .chapter1-go-to-menu,
+  .chapter2-go-to-menu {
+    display: flex;
+    flex: initial;
+    justify-content: flex-end;
+    width: 100px;
+  }
+
+  .chapter1-example-content,
+  .chapter2-example-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .chapter1-example-content-pascal,
+  .chapter2-example-content-pascal,
+  .chapter1-example-content-javascript,
+  .chapter2-example-content-javascript,
+  .chapter2-example-content-pascal-language,
+  .chapter2-example-content-javascript-language {
+    flex: initial;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: initial;
+    padding: 15px;
+  }
+
+  footer {
+    display: flex;
+    flex: initial;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+  }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 901px) {
+  header {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    padding: 25px;
+  }
+
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    width: 900px;
+  }
+
+  .quotation1-containter {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .quotation2-containter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .contact-data-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .linkedin {
+    display: flex;
+  }
+  
+  .contact-linkedin-icon {
+    display: flex;
+    margin-right: 2px;
+  }
+
+  .name-surname {
+    display: flex;
+  }
+
+  .title-container,
+  .summary-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .title,
+  .summary {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: initial;
+    height: 200px;
+    width: 900px;
+  }
+
+  .sub-title,
+  .summary-description {
+    padding-top: 10px;
+  }
+
+  .chapters-grid-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .chapters-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 900px;
+  }
+
+  .chapters-grid-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 290px;
+    height: 150px;
+    padding: 15px;
+    margin: 3px;
+  
+    border: 1px solid #000000;
+  }
+
+  .skills-container,
+  .projects-container {
+    display: flex;
+    justify-content: center;
+  }  
+
+  .skills-content {
+    display: flex;
+    width: 900px;
+  }
+
+  .technologies-content,
+  .tools-content,
+  .knowledge-content,
+  .projects-content {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 15px;
+  }
+
+  .tools-content {
+    border-left: 1px solid #000000;
+    border-right: 1px solid #000000;
+  }
+
+  .projects-content {
+    border-top: 1px solid #000000;
+    width: 900px;
+  }
+
+  .chapter-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .chapter1-title,
+  .chapter2-title,
+  .chapter1-header,
+  .chapter2-header {
+    display: flex;
+    align-items: initial;
+    justify-content: center;
+    width: 900px;
+    padding: 10px;
+  }
+
+  .chapter1-example-title,
+  .chapter2-example-title {
+    display: flex;
+    flex: 1;
+    justify-content: left;
+  }
+
+  .chapter1-go-to-menu,
+  .chapter2-go-to-menu {
+    display: flex;
+    flex: initial;
+    justify-content: flex-end;
+    width: 100px;
+  }
+
+  .chapter1-example-content,
+  .chapter2-example-content {
+    display: flex;
+    align-items: flex-start;
+    width: 900px;
+  }
+
+  .chapter1-example-content-pascal,
+  .chapter2-example-content-pascal,
+  .chapter1-example-content-javascript,
+  .chapter2-example-content-javascript,
+  .chapter2-example-content-pascal-language,
+  .chapter2-example-content-javascript-language {
+    flex: initial;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: initial;
+    padding: 15px;
+  }
+
+  footer {
+    display: flex;
+    flex: initial;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+  }
 }
 
 @font-face {
@@ -66,17 +614,6 @@ a:active {
 header {
   color: #ffffff;
   background-color: #5995DA;
-  padding: 25px;
-  display: flex;
-  flex-direction: column; 
-  align-items: center;
-}
-  
-.header-container {
-  height: 50px;
-  width: 900px;
-  display: flex;
-  justify-content: space-between;
 }
 
 .about-me {
@@ -84,127 +621,62 @@ header {
   color: #ffffff;
   font-size: 15px;
   font-weight: bold;
+
 }
 
 .quotation1-containter {
-  display: flex;
-  flex-direction: column;
-  align-items: initial;
   font-family: 'daniel', sans-serif;
   font-size: 15px;
 }
 
 .quotation2-containter {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
   font-family: 'daniel', sans-serif;
   font-size: 15px;
-  padding: 15px, 0px, 0px, 15px;
-}
-
-.linkedin {
-  display: flex;
-  justify-content:flex-end;
-}
-
-.contact-linkedin-icon {
-  width: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  padding-right: 5px;
 }
 
 .contact-in-touch {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-family: 'Times New Roman', Times, serif;
   font-size: 12px;
 }
 
 .name-surname {
-  display: flex;
-  align-items: flex-end;
   font-family: 'Times New Roman', Times, serif;
   font-size: 40px;
-  padding: 15px, 0px, 0px, 15px;
+  text-align: right;
 }
 
 .title-container,
 .summary-container {
   color: #5995DA;
   background-color: #D6E9FE;
-  display: flex;
-  justify-content: center;
 }
   
 .title,
 .summary {
   text-align: center;
-  width: 900px;
-  height: 200px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: initial;
 }
 
 .main-title,
 .summary-title {
-    font-family: '1942', sans-serif;
-    font-size: 35px;
+  font-family: '1942', sans-serif;
+  font-size: 35px;
 }
 
 .sub-title {
-    font-family: '1942', sans-serif;
-    font-size: 20px;
-    padding-top: 10px;
+  font-family: '1942', sans-serif;
+  font-size: 20px;
 }
 
 .summary-description {
   font-family: "cartoonist", sans-serif;
   font-size: 25px;
-  padding-top: 10px;
-}
-
-.chapters-grid-container {
-  display: flex;
-  justify-content: center;
-}
-  
-.chapters-grid {
-  width: 900px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
 }
   
 .chapters-grid-item {
   background-color: #ffffff;
-  width: 290px;
-  height: 150px;
-  border-left: 1px solid #000000;
-  border-right: 1px solid #000000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 15px;
-  margin: 0px 5px 5px 0px;
   text-align: center;
   font-family: "cartoonist", sans-serif;
   font-size: 20px;
-}
-
-.chapter-container,
-.skills-container,
-.projects-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
 }
   
 .chapter1-title,
@@ -213,55 +685,20 @@ header {
 .chapter2-header {
   background-color: #ffffff;
   border-bottom: 1px solid #000000;
-  width: 900px;
-  display: flex;
-  justify-content: center;
-  align-items: initial;
   font-family: "cartoonist-bold", sans-serif;
   font-size: 20px;
-  padding: 10px;
 }
 
 .chapter1-example-title,
 .chapter2-example-title {
-    flex: 1;
-    display: flex;
-    justify-content: left;
     font-family: "cartoonist", sans-serif;
     font-size: 22px;
 }
 
 .chapter1-go-to-menu,
 .chapter2-go-to-menu {
-    flex: initial;
-    display: flex;
-    justify-content: flex-end;
-    width: 100px;
     font-family: "cartoonist-bold", sans-serif;
     font-size: 15px;
-}
-
-.chapter1-example-content,
-.chapter2-example-content,
-.skills-content {
-  display: flex;
-  width: 900px;
-  justify-content: center;
-}
-
-.chapter1-example-content-pascal,
-.chapter2-example-content-pascal,
-.chapter1-example-content-javascript,
-.chapter2-example-content-javascript,
-.chapter2-example-content-pascal-language,
-.chapter2-example-content-javascript-language {
-  flex: initial;
-  width: 450px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: initial;
-  padding: 15px;
 }
 
 .chapter1-example-content-pascal,
@@ -286,26 +723,10 @@ header {
 .tools-content,
 .knowledge-content,
 .projects-content {
-  flex: initial;
-  width: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: initial;
-  padding: 15px;
   background-color: #ffffff;
   font-family: "cartoonist", sans-serif;
   font-size: 20px;
-}
-
-.tools-content {
-  border-left: 1px solid #000000;
-  border-right: 1px solid #000000;
-}
-
-.projects-content {
-  border-top: 1px solid #000000;
-  width: 900px;
+  text-align: center;
 }
 
 .technologies-title,
@@ -335,10 +756,5 @@ header {
 
 footer {
   background-color: #D6E9FE;
-  height: 100px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  flex: initial;
 }
 

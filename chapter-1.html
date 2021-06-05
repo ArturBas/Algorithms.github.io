@@ -30,16 +30,16 @@
                 <p class="chapter1-go-to-menu"><a href="wirth-in-javascript.html">Go to menu</a></p>
             </div>
             <div class='chapter1-example-content'>
-                <div class='chapter1-example-content-pascal'><b>Pascal <a href="https://www.inr.ac.ru/~info21/ADen/AD2012.pdf#page=18" target="_blank">&lpar;notation from &rArr; the book&rpar;</a></b></div>
-                <div class='chapter1-example-content-javascript'><b>JavaScript</b></div>
-            </div>
-            <div class='chapter1-example-content'>
                 <div class='chapter1-example-content-pascal'>
+                    <b>Pascal <a href="https://www.inr.ac.ru/~info21/ADen/AD2012.pdf#page=18" target="_blank">&lpar;notation from &rArr; the book&rpar;</a></b></p>
+                    <br><br>
                     <p>VAR a&colon; ARRAY N OF INTEGER&semi;</p>
                     <p>sum&colon;&equals;0&semi;</p>
                     <p>FOR i&colon;&equals;0 TO N&minus;1 DO sum&colon;&equals;a&lsqb;i&rsqb; &plus; sum END</p>
                 </div>
                 <div class='chapter1-example-content-javascript'>
+                    <p><b>JavaScript</b></p>
+                    <br><br>
                     <p>const a &equals; &lsqb;&rsqb;;</p>
                     <p>const n &equals; a&period;length&semi;</p>        
                     <p>let i &equals; 0&semi;</p>
@@ -56,18 +56,19 @@
                 <p class="chapter1-go-to-menu"><a href="wirth-in-javascript.html">Go to menu</a></p>
             </div>
             <div class='chapter1-example-content'>
-                <div class='chapter1-example-content-pascal'><b>Pascal <a href="https://www.inr.ac.ru/~info21/ADen/AD2012.pdf#page=18" target="_blank">&lpar;notation from &rArr; the book&rpar;</a></b></div>
-                <div class='chapter1-example-content-javascript'><b>JavaScript</b></div>
-            </div>
-            <div class='chapter1-example-content'>
                 <div class='chapter1-example-content-pascal'>
+                    <b>Pascal <a href="https://www.inr.ac.ru/~info21/ADen/AD2012.pdf#page=18" target="_blank">&lpar;notation from &rArr; the book&rpar;</a></b></p>
+                    <br><br>
                     <p>VAR a&colon; ARRAY N OF INTEGER&semi;</p>
                     <p>k&colon;&equals;0&semi; max&colon;&equals;a&lsqb;0&rsqb;&semi;</p>
                     <p>FOR i&colon;&equals;1 TO N&minus;1 DO</p>
-                    <p class="indent1">IF max &lt; a&lsqb;i&rsqb; THEN k&colon;&equals;i&semi; max&colon;&equals;a&lsqb;k&rsqb; END</p>
+                    <p class="indent1">IF max &lt; a&lsqb;i&rsqb; THEN k&colon;&equals;i&semi; max&colon;&equals;a&lsqb;k&rsqb;</p>
+                    <p class="indent1">END</p>
                     <p>END</p>
                 </div>
                 <div class='chapter1-example-content-javascript'>
+                    <p><b>JavaScript</b></p>
+                    <br><br>
                     <p>const a &equals; &lsqb;&rsqb;;</p>
                     <p>const n &equals; a&period;length&semi;</p>        
                     <p>let i &equals; 1&semi;</p>
@@ -76,8 +77,8 @@
                     <br>
                     <p>for &lpar;i&semi; i &lt;&equals; &lpar;n &minus; 1&rpar;&semi; i&plus;&plus;&rpar; &lcub;</p>
                     <p class="indent1">if &lpar;max &lt; a&lsqb;i&rsqb;&rpar; &lcub;</p>
-                    <p>k &equals; i&semi;</p>
-                    <p>max &equals; a&lsqb;k&rsqb;&semi;</p>
+                    <p class="indent2">k &equals; i&semi;</p>
+                    <p class="indent2">max &equals; a&lsqb;k&rsqb;&semi;</p>
                     <p class="indent1">&rcub;</p>
                     <p>&rcub;</p>
                 </div>
@@ -88,11 +89,9 @@
                 <p class="chapter1-go-to-menu"><a href="wirth-in-javascript.html">Go to menu</a></p>
             </div>
             <div class='chapter1-example-content'>
-                <div class='chapter1-example-content-pascal'><b>Pascal <a href="https://www.inr.ac.ru/~info21/ADen/AD2012.pdf#page=19" target="_blank">&lpar;notation from &rArr; the book&rpar;</a></b></div>
-                <div class='chapter1-example-content-javascript'><b>JavaScript</b></div>
-            </div>
-            <div class='chapter1-example-content'>
                 <div class='chapter1-example-content-pascal'>
+                    <b>Pascal <a href="https://www.inr.ac.ru/~info21/ADen/AD2012.pdf#page=18" target="_blank">&lpar;notation from &rArr; the book&rpar;</a></b></p>
+                    <br><br>
                     <p>PROCEDURE Power &lpar;VAR W&colon; Texts&period;Writer&semi; N&colon; INTEGER&rpar;&semi;</p>
                     <p class="indent1">&lpar;&ast;compute decimal representation of negative powers of 2&ast;&rpar;</p>
                     <p class="indent1">VAR i&comma;k&comma;r&colon; INTEGER&semi;</p>
@@ -109,13 +108,15 @@
                     <p>END Power</p>
                 </div>
                 <div class='chapter1-example-content-javascript'>
+                    <p><b>JavaScript</b></p>
+                    <br><br>
                     <p>function power&lpar;n&rpar; &lcub;</p>
                     <p class="indent1">let i&semi;</p>
                     <p class="indent1">let k&semi;</p>
                     <p class="indent1">let r&semi;</p>
                     <p class="indent1">let d &equals; &lsqb;&rsqb;&semi;</p>
                     <br>
-                    <p>for &lpar;k &equals; 0&semi; k &lt;&equals; n&minus;1; k&plus;&plus;&rpar; &lcub;</p>
+                    <p>for &lpar;k &equals; 0&semi; k &lt;&equals; n&minus;1&semi; k&plus;&plus;&rpar; &lcub;</p>
                     <p class="indent2">r &equals; 0&semi;</p>        
                     <p class="indent2">for &lpar;i &equals; 0&semi; k &lt;&equals; &lpar;k &minus; 1&rpar;&semi; i&plus;&plus;&rpar; &lcub;</p>
                     <p class="indent3">r &equals; 10 &ast; r &plus; d&lsqb;i&rsqb;&semi;</p>
@@ -126,7 +127,7 @@
                     <p class="indent1">&rcub;</p>
                     <p>&rcub;</p>
                 </div>
-            </div>
+            </div>            
             
         </section>
         <footer>

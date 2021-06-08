@@ -5,7 +5,7 @@
         <meta name='viewport'
             content='width=device-width, initial-scale=1.0, maximum-scale=1.0'/>
         <title>Chapter 1 &hyphen; Fundamental Data Structure</title>
-        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="css/styles.css" />
     </head>    
     <body>
         <header>
@@ -40,8 +40,8 @@
                 <div class='chapter1-example-content-javascript'>
                     <p><b>JavaScript</b></p>
                     <br><br>
-                    <p>const a &equals; &lsqb;&rsqb;;</p>
-                    <p>const n &equals; a&period;length&semi;</p>        
+                    <p>let a &equals; &lsqb;&rsqb;;</p>
+                    <p>let n &equals; a&period;length&semi;</p>        
                     <p>let i &equals; 0&semi;</p>
                     <p>let sum &equals; 0&semi;</p>
                     <br>
@@ -69,8 +69,8 @@
                 <div class='chapter1-example-content-javascript'>
                     <p><b>JavaScript</b></p>
                     <br><br>
-                    <p>const a &equals; &lsqb;&rsqb;;</p>
-                    <p>const n &equals; a&period;length&semi;</p>        
+                    <p>let a &equals; &lsqb;&rsqb;;</p>
+                    <p>let n &equals; a&period;length&semi;</p>        
                     <p>let i &equals; 1&semi;</p>
                     <p>let k &equals; 0&semi;</p>
                     <p>let max &equals; a&lsqb;0&rsqb;&semi;</p>
@@ -116,14 +116,47 @@
                     <p class="indent1">let r&semi;</p>
                     <p class="indent1">let d &equals; &lsqb;&rsqb;&semi;</p>
                     <br>
-                    <p>for &lpar;k &equals; 0&semi; k &lt;&equals; n&minus;1&semi; k&plus;&plus;&rpar; &lcub;</p>
-                    <p class="indent2">r &equals; 0&semi;</p>        
-                    <p class="indent2">for &lpar;i &equals; 0&semi; k &lt;&equals; &lpar;k &minus; 1&rpar;&semi; i&plus;&plus;&rpar; &lcub;</p>
+                    <p class="indent1">for &lpar;k &equals; 0&semi; k &lt;&equals; &lpar;n &minus; 1&rpar;&semi; k&plus;&plus;&rpar; &lcub;</p>
+                    <p class="indent2">r &equals; 0&semi;</p>
+                    <p class="indent2">for &lpar;i &equals; 0&semi; i &lt;&equals; &lpar;k &minus; 1&rpar;&semi; i&plus;&plus;&rpar; &lcub;</p>
                     <p class="indent3">r &equals; 10 &ast; r &plus; d&lsqb;i&rsqb;&semi;</p>
                     <p class="indent3">d&lsqb;i&rsqb; &plus; Math&period;floor&lpar;r &sol; 2&rpar;&semi;</p>            
                     <p class="indent3">r &equals; r &minus; 2 &ast; d&lsqb;i&rsqb;&semi;</p>
                     <p class="indent2">&rcub;</p>
+                    <p class="indent2">d&lsqb;k&rsqb; &equals; 5&semi;</p>
                     <p class="indent2">console&period;log&lpar;&quot;&period;&quot; &plus; d&period;join&lpar;&quot;&quot;&rpar;&rpar;&semi;</p>
+                    <p class="indent1">&rcub;</p>
+                    <p>&rcub;</p>
+                </div>
+            </div>
+            
+            <div class='chapter1-header'>
+                <p class="chapter1-example-title">Searching through record variables</p>
+                <p class="chapter1-go-to-menu"><a href="wirth-in-javascript.html">Go to menu</a></p>
+            </div>
+            <div class='chapter1-example-content'>
+                <div class='chapter1-example-content-pascal'>
+                    <b>Pascal <a href="https://www.inr.ac.ru/~info21/ADen/AD2012.pdf#page=21" target="_blank">&lpar;notation from &rArr; the book&rpar;</a></b></p>
+                    <br><br>
+                    <p>VAR count&colon; INTEGER&semi;</p>
+                    <p class="indent1">&nbsp;family&colon; ARRAY N OF Person&semi;</p>
+                    <p>count&colon;&equals;0&semi;</p>
+                    <p>FOR i&colon;&equals;0 TO N&minus;1 DO</p>
+                    <p class="indent1">IF &sim;family&lsqb;i&rsqb;&period;male &amp; &lpar;family&lsqb;i&rsqb;&period;birthday&period;year&gt;2000&rpar; THEN INC&lpar;count&rpar;</p>
+                    <p class="indent1">END</p>
+                    <p>END</p>
+                </div>
+                <div class='chapter1-example-content-javascript'>
+                    <p><b>JavaScript</b></p>
+                    <br><br>
+                    <p>let family &equals; &lsqb;&rsqb;&semi;</p>
+                    <p>let n &equals; family&period;length&semi;</p>
+                    <p>let count &equals; 0&semi;</p>
+                    <p>let i &equals; 0&semi;</p>
+                    <br>
+                    <p>for &lpar;i&semi; i &lt;&equals; n&minus;1&semi; i&plus;&plus;&rpar; &lcub;</p>
+                    <p class="indent1">    if &lpar;family&lsqb;i&rsqb;&period;male &excl;&equals; true &amp; family&lsqb;i&rsqb;&period;birthDate&period;year &gt; 2000&rpar; &lcub;</p>
+                    <p class="indent2">count&plus;&plus;&semi;</p>
                     <p class="indent1">&rcub;</p>
                     <p>&rcub;</p>
                 </div>

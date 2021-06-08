@@ -1,5 +1,5 @@
-const a = [3,9,5,2,6,15,16]; /* an example set of values for checking the algorithm correctness */
-const n = a.length;
+let a = [3,9,5,2,6,15,16]; /* an example set of values for checking the algorithm correctness */
+let n = a.length;
 let i = 1;
 let k = 0;
 let max = a[0];

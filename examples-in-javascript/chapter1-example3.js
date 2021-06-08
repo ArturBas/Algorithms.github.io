@@ -5,7 +5,7 @@ function power(n) {
     let r;
     let d = [];
 
-    for (k = 0; k <= n-1; k++) {
+    for (k = 0; k <= (n-1); k++) {
         r = 0;
         for (i = 0; i <= (k - 1); i++) {
             r = 10 * r + d[i];

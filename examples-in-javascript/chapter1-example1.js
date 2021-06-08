@@ -1,5 +1,5 @@
-const a = [3,9,5,2,6,15,16]; /* an example set of values for checking the algorithm correctness */
-const n = a.length;
+let a = [3,9,5,2,6,15,16]; /* an example set of values for checking the algorithm correctness */
+let n = a.length;
 let i = 0;
 let sum = 0;
 

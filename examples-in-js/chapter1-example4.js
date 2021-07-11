@@ -1,53 +1,21 @@
-/* an example set of values for checking the algorithm correctness */
-let family = [
-    {
-        male: true,
-        birthdate:
-        {
-            day: "day1",
-            month: "month1",
-            year: 2001
+function power(n) {
+
+    let i;
+    let k;
+    let r;
+    let d = [];
+
+    for (k = 0; k <= (n-1); k++) {
+        r = 0;
+        for (i = 0; i <= (k - 1); i++) {
+            r = 10 * r + d[i];
+            d[i] = Math.floor(r/2);
+            r = r - 2 * d[i];
         }
-    },
-
-    {
-        male: false,
-        birthdate:
-        {
-            day: "day2",
-            month: "month2",
-            year: 2005
-        }
-    },
-
-    {
-        male: true,
-        birthdate:
-        {
-            day:"day3",
-            month:"month3",
-            year:1995
-        }
-    },
-
-    {
-        male: false,
-        birthDate:
-        {
-            day:"day3",
-            month:"month3",
-            year:2017
-        }
-    }
-];
-
-let n = family.length;
-let count = 0;
-let i = 0;
-
-for (i; i <= (n-1); i++) {
-    if (family[i].male != true & family[i].birthDate.year > 2000) {
-        count++;
+        d[k] = 5;
+        console.log("." + d.join(""));
     }
 }
-console.log(count); /* printing the result */
+
+// check function for ten iterations
+power(10);

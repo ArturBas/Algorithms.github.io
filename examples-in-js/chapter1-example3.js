@@ -1,21 +1,14 @@
-function power(n) {
+let a = [3,9,5,2,6,15,16]; // an example set of values for checking the algorithm correctness
+let n = a.length;
+let i = 1;
+let k = 0;
+let max = a[0];
 
-    let i;
-    let k;
-    let r;
-    let d = [];
-
-    for (k = 0; k <= (n-1); k++) {
-        r = 0;
-        for (i = 0; i <= (k - 1); i++) {
-            r = 10 * r + d[i];
-            d[i] = Math.floor(r/2);
-            r = r - 2 * d[i];
-        }
-        d[k] = 5;
-        console.log("." + d.join(""));
+for (i; i <= (n - 1); i++) {
+    if (max < a[i]) {
+        k = i;
+        max = a[k]
     }
 }
 
-/* check function for ten iterations */
-power(10);
+console.log(max); // printing the result

@@ -1,10 +1,14 @@
-let a = [3,9,5,2,6,15,16]; /* an example set of values for checking the algorithm correctness */
-let n = a.length;
-let i = 0;
-let sum = 0;
+let x = 2.5; // an example set of values for checking the algorithm correctness
+let y = 1; 
+const n = 3; // an example set of values for checking the algorithm correctness
+let i;
+const isOdd = num => num % 2 === 1;
 
-for (i; i <= (n - 1); i++) {
-    sum = a[i] + sum;
+for (i = n; i > 0; i = Math.floor(i / 2)) {
+    if (isOdd(i)) {
+        y = y * x;
+    }
+    x = x * x;
 }
 
-console.log(sum); /* printing the result */
+console.log(y); // printing the result

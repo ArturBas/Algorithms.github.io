@@ -69,5 +69,6 @@ const menu = {
   menu.addDishToCourse('desserts', 'choco-pudding', 2);
   menu.addDishToCourse('desserts', 'ice-cream', 1);
   menu.addDishToCourse('desserts', 'apple pie', (3.5));
+  
   const meal = menu.generateRandomMeal();
   console.log(meal);

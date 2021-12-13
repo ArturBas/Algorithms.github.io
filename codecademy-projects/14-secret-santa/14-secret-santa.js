@@ -40,5 +40,5 @@ function makeRandomPairs (inputArray, outputArray) {
 }
 makeRandomPairs (names, pairs);
 
-// Display the file data
+// Display the pairs-array data
 console.log(pairs);

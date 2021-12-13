@@ -30,7 +30,7 @@ function shuffleArray (array) {
 //Create random pair-objects
 function makeRandomPairs (inputArray, outputArray) {
     let counter = 0;    
-    shuffleArray(inputArray);
+    inputArray = shuffleArray(inputArray);
 
     for (let k = 0; k < (inputArray.length / 2); k++) {
         counter += 1;

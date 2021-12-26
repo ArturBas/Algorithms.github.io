@@ -46,7 +46,7 @@ const dogFactory = (name, breed, weight) => {
     eatTooManyTreats() {
       this._weight++;
     }
-	};
+	}
   return (typeof newDog._name === 'string'
     && typeof newDog._breed === 'string' 
     && typeof newDog._weight === 'number') 

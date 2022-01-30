@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name='viewport'
+            content='width=device-width, initial-scale=1.0, maximum-scale=1.0'/>
+        <title>Chapter 1 &hyphen; Fundamental Data Structure</title>
+        <link rel="stylesheet" href="css/styles.css" />
+    </head>    
+    <body>
+        <header>
+            <div class="header-container">
+                <div class="about-me"><a href="about-me.html" target="_blank">About me</a></div>
+                <div class="quotation1-containter">
+                    <div class="quotation-content">&quot;Programming is usually taught by examples&quot;</div>
+                    <div class="quotation-author">&lpar;Niklaus Wirth&rpar;</div>
+                </div>
+            </div>
+        </header>
+        <section class="title-container">
+            <div class="title">
+                <div class="main-title">Algorithms &plus; Data Structures &equals; Programs</div>
+                <div class="sub-title">&lpar;in JavaScript&rpar;</div>
+            </div>
+        </section>
+        <section class='chapter-container'>
+            <p class='chapter1-title'>Chapter 1 &hyphen; Fundamental Data Structures &lpar;work in progress&rpar;</p>
+            <div class='chapter1-header'>
+                <p class="chapter1-example-title">Computing y &equals; x&#8319;, where n is a non-negative integer</p>
+                <p class="chapter1-go-to-menu"><a href="wirth-in-javascript.html">Go to menu</a></p>
+            </div>
+            <div class='chapter1-example-content'>
+                <div class='chapter1-example-content-pascal'>
+                    <b>Pascal <a href="https://www.inr.ac.ru/~info21/ADen/AD2012.pdf#page=14" target="_blank">&lpar;notation from &rArr; the book&rpar;</a></b></p>
+                    <br><br>
+                    <p>y&colon;&equals;1&period;0&semi; i&colon;&equals;n&semi;</p>
+                    <p>WHILE i&gt;0&colon; DO &lpar;&ast; x&#8320;&#8319; &equals; x&#8305; &ast; y &ast;&rpar;</p>
+                    <p>IF ODD&lpar;i&rpar; THEN y&colon;&equals;y&ast;x END&semi;</p>
+                    <p class="indent1">x&colon;&equals;x&ast;x&semi; i&colon;&equals;i DIV 2</p>
+                    <p>END</p>
+                </div>
+                <div class='chapter1-example-content-javascript'>
+                    <p><b>JavaScript</b></p>
+                    <br><br>
+                    <p>let x&semi;</p>
+                    <p>let y&semi;</p>
+                    <p>const n&semi;</p>
+                    <p>let i&semi;</p>        
+                    <p>let const isOdd &equals; num &equals;&gt; num &percnt; 2 &equals;&equals;&equals; 1&semi;</p>
+                    <br>
+                    <p>for &lpar;i &equals; n&semi; i &gt; 0&semi; i &equals; Math&period;floor&lpar;i &sol; 2&rpar;&rpar; &lcub;</p>
+                    <p class="indent1">if &lpar;isOdd&lpar;i&rpar;&rpar; &lcub;</p>
+                    <p class="indent2">y &equals; y &ast; x&semi;</p>                
+                    <p class="indent1">&rcub;</p>
+                    <p class="indent1">x &equals; x &ast; x&semi;</p>    
+                    <p>&rcub;</p>
+                </div>
+            </div>
+
+            <div class='chapter1-header'>
+                <p class="chapter1-example-title">Computing the sum of an array</p>
+                <p class="chapter1-go-to-menu"><a href="wirth-in-javascript.html">Go to menu</a></p>
+            </div>
+            <div class='chapter1-example-content'>
+                <div class='chapter1-example-content-pascal'>
+                    <b>Pascal <a href="https://www.inr.ac.ru/~info21/ADen/AD2012.pdf#page=18" target="_blank">&lpar;notation from &rArr; the book&rpar;</a></b></p>
+                    <br><br>
+                    <p>VAR a&colon; ARRAY N OF INTEGER&semi;</p>
+                    <p>sum&colon;&equals;0&semi;</p>
+                    <p>FOR i&colon;&equals;0 TO N&minus;1 DO sum&colon;&equals;a&lsqb;i&rsqb; &plus; sum END</p>
+                </div>
+                <div class='chapter1-example-content-javascript'>
+                    <p><b>JavaScript</b></p>
+                    <br><br>
+                    <p>let a &equals; &lsqb;&rsqb;;</p>
+                    <p>let n &equals; a&period;length&semi;</p>        
+                    <p>let i &equals; 0&semi;</p>
+                    <p>let sum &equals; 0&semi;</p>
+                    <br>
+                    <p>for &lpar;i&semi; i &lt;&equals; &lpar;n &minus; 1&rpar;&semi; i&plus;&plus;&rpar; &lcub;</p>
+                    <p class="indent1">sum &equals; a&lsqb;i&rsqb; &plus; sum&semi;</p>
+                    <p>&rcub;</p>
+                </div>
+            </div>
+
+            <div class='chapter1-header'>
+                <p class="chapter1-example-title">Finding the maximal element of an array</p>
+                <p class="chapter1-go-to-menu"><a href="wirth-in-javascript.html">Go to menu</a></p>
+            </div>
+            <div class='chapter1-example-content'>
+                <div class='chapter1-example-content-pascal'>
+                    <b>Pascal <a href="https://www.inr.ac.ru/~info21/ADen/AD2012.pdf#page=18" target="_blank">&lpar;notation from &rArr; the book&rpar;</a></b></p>
+                    <br><br>
+                    <p>VAR a&colon; ARRAY N OF INTEGER&semi;</p>
+                    <p>k&colon;&equals;0&semi; max&colon;&equals;a&lsqb;0&rsqb;&semi;</p>
+                    <p>FOR i&colon;&equals;1 TO N&minus;1 DO</p>
+                    <p class="indent1">IF max &lt; a&lsqb;i&rsqb; THEN k&colon;&equals;i&semi; max&colon;&equals;a&lsqb;k&rsqb;</p>
+                    <p class="indent1">END</p>
+                    <p>END</p>
+                </div>
+                <div class='chapter1-example-content-javascript'>
+                    <p><b>JavaScript</b></p>
+                    <br><br>
+                    <p>let a &equals; &lsqb;&rsqb;;</p>
+                    <p>let n &equals; a&period;length&semi;</p>        
+                    <p>let i &equals; 1&semi;</p>
+                    <p>let k &equals; 0&semi;</p>
+                    <p>let max &equals; a&lsqb;0&rsqb;&semi;</p>
+                    <br>
+                    <p>for &lpar;i&semi; i &lt;&equals; &lpar;n &minus; 1&rpar;&semi; i&plus;&plus;&rpar; &lcub;</p>
+                    <p class="indent1">if &lpar;max &lt; a&lsqb;i&rsqb;&rpar; &lcub;</p>
+                    <p class="indent2">k &equals; i&semi;</p>
+                    <p class="indent2">max &equals; a&lsqb;k&rsqb;&semi;</p>
+                    <p class="indent1">&rcub;</p>
+                    <p>&rcub;</p>
+                </div>
+            </div>
+
+            <div class='chapter1-header'>
+                <p class="chapter1-example-title">Dividing arrays &lpar;practical example&rpar;</p>
+                <p class="chapter1-go-to-menu"><a href="wirth-in-javascript.html">Go to menu</a></p>
+            </div>
+            <div class='chapter1-example-content'>
+                <div class='chapter1-example-content-pascal'>
+                    <b>Pascal <a href="https://www.inr.ac.ru/~info21/ADen/AD2012.pdf#page=19" target="_blank">&lpar;notation from &rArr; the book&rpar;</a></b></p>
+                    <br><br>
+                    <p>PROCEDURE Power &lpar;VAR W&colon; Texts&period;Writer&semi; N&colon; INTEGER&rpar;&semi;</p>
+                    <p class="indent1">&lpar;&ast;compute decimal representation of negative powers of 2&ast;&rpar;</p>
+                    <p class="indent1">VAR i&comma;k&comma;r&colon; INTEGER&semi;</p>
+                    <p class="indent2">d&colon; ARRAY N OF INTEGER&semi;</p>
+                    <p>BEGIN</p>
+                    <p class="indent1">FOR k&colon;&equals;0 TO N&minus;1 DO</p>
+                    <p class="indent2">Texts&period;Write &lpar;W&comma; &quot;&period;&quot;&rpar;&semi; r&colon; &equals; 0&semi;</p>
+                    <p class="indent2">FOR i&colon;&equals;1&semi; TO k&minus;1 DO</p>
+                    <p class="indent3">r&colon;&equals;10&ast;r &plus; d&lsqb;i&rsqb;&semi; d&lsqb;i&rsqb;&colon;&equals;r DIV 2&semi; r&colon;&equals;r MOD 2&semi;</p>
+                    <p class="indent3">Texts&period;Write&lpar;W&comma; CHR&lpar;d&lsqb;i&rsqb; &plus; ord&lpar;&quot;0&quot;&rpar;&rpar;&rpar;</p>
+                    <p class="indent2">END&semi;</p>
+                    <p class="indent2">d&lsqb;k&rsqb;&colon;&equals;5&semi; Texts&period;Writeln&lpar;W&comma; &quot;5&quot;&rpar;&semi; Texts&period;WriteLn&lpar;W&rpar;</p>
+                    <p class="indent1">END</p>
+                    <p>END Power</p>
+                </div>
+                <div class='chapter1-example-content-javascript'>
+                    <p><b>JavaScript</b></p>
+                    <br><br>
+                    <p>function power&lpar;n&rpar; &lcub;</p>
+                    <p class="indent1">let i&semi;</p>
+                    <p class="indent1">let k&semi;</p>
+                    <p class="indent1">let r&semi;</p>
+                    <p class="indent1">let d &equals; &lsqb;&rsqb;&semi;</p>
+                    <br>
+                    <p class="indent1">for &lpar;k &equals; 0&semi; k &lt;&equals; &lpar;n &minus; 1&rpar;&semi; k&plus;&plus;&rpar; &lcub;</p>
+                    <p class="indent2">r &equals; 0&semi;</p>
+                    <p class="indent2">for &lpar;i &equals; 0&semi; i &lt;&equals; &lpar;k &minus; 1&rpar;&semi; i&plus;&plus;&rpar; &lcub;</p>
+                    <p class="indent3">r &equals; 10 &ast; r &plus; d&lsqb;i&rsqb;&semi;</p>
+                    <p class="indent3">d&lsqb;i&rsqb; &plus; Math&period;floor&lpar;r &sol; 2&rpar;&semi;</p>            
+                    <p class="indent3">r &equals; r &minus; 2 &ast; d&lsqb;i&rsqb;&semi;</p>
+                    <p class="indent2">&rcub;</p>
+                    <p class="indent2">d&lsqb;k&rsqb; &equals; 5&semi;</p>
+                    <p class="indent2">console&period;log&lpar;&quot;&period;&quot; &plus; d&period;join&lpar;&quot;&quot;&rpar;&rpar;&semi;</p>
+                    <p class="indent1">&rcub;</p>
+                    <p>&rcub;</p>
+                </div>
+            </div>
+            
+            <div class='chapter1-header'>
+                <p class="chapter1-example-title">Searching through record variables</p>
+                <p class="chapter1-go-to-menu"><a href="wirth-in-javascript.html">Go to menu</a></p>
+            </div>
+            <div class='chapter1-example-content'>
+                <div class='chapter1-example-content-pascal'>
+                    <b>Pascal <a href="https://www.inr.ac.ru/~info21/ADen/AD2012.pdf#page=21" target="_blank">&lpar;notation from &rArr; the book&rpar;</a></b></p>
+                    <br><br>
+                    <p>VAR count&colon; INTEGER&semi;</p>
+                    <p class="indent1">&nbsp;family&colon; ARRAY N OF Person&semi;</p>
+                    <p>count&colon;&equals;0&semi;</p>
+                    <p>FOR i&colon;&equals;0 TO N&minus;1 DO</p>
+                    <p class="indent1">IF &sim;family&lsqb;i&rsqb;&period;male &amp; &lpar;family&lsqb;i&rsqb;&period;birthday&period;year&gt;2000&rpar; THEN INC&lpar;count&rpar;</p>
+                    <p class="indent1">END</p>
+                    <p>END</p>
+                </div>
+                <div class='chapter1-example-content-javascript'>
+                    <p><b>JavaScript</b></p>
+                    <br><br>
+                    <p>let family &equals; &lsqb;&rsqb;&semi;</p>
+                    <p>let n &equals; family&period;length&semi;</p>
+                    <p>let count &equals; 0&semi;</p>
+                    <p>let i &equals; 0&semi;</p>
+                    <br>
+                    <p>for &lpar;i&semi; i &lt;&equals; n&minus;1&semi; i&plus;&plus;&rpar; &lcub;</p>
+                    <p class="indent1">    if &lpar;family&lsqb;i&rsqb;&period;male &excl;&equals; true &amp; family&lsqb;i&rsqb;&period;birthDate&period;year &gt; 2000&rpar; &lcub;</p>
+                    <p class="indent2">count&plus;&plus;&semi;</p>
+                    <p class="indent1">&rcub;</p>
+                    <p>&rcub;</p>
+                </div>
+            </div>            
+            
+        </section>
+        <footer>
+            <p>&copy; Artur Bas 2021</p>
+        </footer>
+    </body>
+</html>

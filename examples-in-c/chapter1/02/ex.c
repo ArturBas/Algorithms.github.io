@@ -2,12 +2,12 @@
 
 //Test values
 int a[] = {2, 3, 4, 7, 2, 4, 9};
+size_t n = sizeof(a)/sizeof(a[0]);
 
 int main() {
     
   //Computing the sum of an array
   int sum = 0;
-  size_t n = sizeof(a)/sizeof(a[0]);
   for(int i = 0; i < n; i++) {
     sum += a[i];
   }

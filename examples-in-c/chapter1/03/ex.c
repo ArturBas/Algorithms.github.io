@@ -1,14 +1,12 @@
 #include <stdio.h>
 
-int main() {
-
-  void power(int n) {
+void power(int n) {
     int i, k, r;
     int d[n];
-    for (k = 0; k <= (n - 1); k++) {
+    for (k = 0; k < n; k++) {
       printf(".");
       r = 0;
-      for (i = 0; i <= (k - 1); i++) {
+      for (i = 0; i < k; i++) {
         r = (10 * r) + d[i];
         d[i] = r / 2;
         r = r % 2;
@@ -18,6 +16,8 @@ int main() {
       printf("5\n");
     }
   }
+
+int main() {
 
   //Test
   power(10);

@@ -18,11 +18,13 @@ struct person {
   {"Jackie", "Chan", {7, 7, 1998}, false}
   };
 
+  int n = sizeof(family) / sizeof(family[0]);
+
 int main() {
 
   //Searching algorithm
   int count = 0;
-  for(int i = 0; i < (sizeof(family) / sizeof(family[0])); i++) {
+  for(int i = 0; i < n; i++) {
     if (family[i].male != true && family[i].birthday.year > 2000) {
       count++;
     }
